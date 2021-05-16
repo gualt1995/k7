@@ -1,0 +1,45 @@
+
+:root{
+    --type_color: black;
+    --background_color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    color: var(--type_color);
+    background: var(--background_color);
+}
+
+@media screen and (max-width: 450px) {
+    /* when the viewport is 450px or smaller */
+    html{
+        font-size: 16px;
+    }
+}
+
+body{
+    margin: 0px;
+}
+
+
+.view_port_frame{
+    width: 100vw;
+    height: 100vh;
+}
+
+.unselectable{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.title_frame{
+    margin : 0px 2%;
+}
+
+
+

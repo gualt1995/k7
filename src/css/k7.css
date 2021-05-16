@@ -1,0 +1,177 @@
+.k7_frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.k7{
+    position: relative;
+    background: url(../assets/k7_background.png);
+    width: 90%;
+    max-width: 325px;
+    height: 203px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 9px;
+    box-shadow: 0px 1px 8px #000000;
+    z-index: 1;
+}
+
+.k7_sticker{
+    position: relative;
+    background: url(../assets/sticker.svg);
+    width: 89%;
+    max-width: 289px;
+    height: 133px;
+    border-radius: 10px;
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.k7_main_frame{
+    font-family: 'Architects Daughter', cursive;
+    color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.k7_title_frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    width: 70%;
+}
+
+.k7_title{
+    padding-top: 5px;
+    font-size: 1em;
+    line-height: 0.667em;
+    width: 100%;
+}
+
+.k7_artist{
+    padding-top: 5px;
+    font-size: 0.778em;
+    line-height: 0.611em;
+    width: 100%;
+}
+
+.underline{
+    width: 100%;
+    height: 1px;
+    background: #646771;
+}
+
+.k7_heart{
+    width: 24px;
+    height: 24px;
+    background: url(../assets/favorite_border.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+}
+
+.k7_tape_frame{
+    top: 38.5%;
+    position: absolute;
+    width: 200px;
+    height: 55px;
+    background: #646771;
+    border: 1px solid #242529;
+    box-sizing: border-box;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.k7_reel_frame{
+    width: 44px;
+    height: 44px;
+    margin: 2px;
+    background: linear-gradient(180deg, #35363C 0%, #3E4046 100%);
+    box-shadow: 0px -1px 1px #5B5E67, 0px 1px 1px #8D909A;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.k7_reel{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+.k7_progress{
+    position: relative;
+    width: 97px;
+    height: 46px;
+    background: linear-gradient(180deg, #35363C 0%, #3E4046 100%);
+    box-shadow: 0px -1px 1px #5B5E67, 0px 1px 1px #8D909A;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.k7_metadata{
+    position: absolute;
+    color: #000000;
+    width: 80%;
+    bottom: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.778em;
+    font-weight: 500;
+}
+
+.k7_min{
+    font-weight: 300;
+}
+
+.k7_tape{
+    background: linear-gradient(180deg, #000000 0%, #282828 50.1%, #000000 100%);
+    border-radius: 50%;
+}
+
+.tape_left{
+    position: absolute;
+    left: -79%;
+    top: -54%;
+    width: 100px;
+    height: 100px;
+}
+.tape_right{
+    position: absolute;
+    top: -22%;
+    right: -65%;
+    width: 70px;
+    height: 70px
+}
+
+.k7_graduations{
+    position: absolute;
+    background: url(../assets/k7_ruler.svg);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
