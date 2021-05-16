@@ -1,2 +1,2 @@
-# Presentation
- Canvas and slide out menu for UI/UX 
+# k7
+A skeuomorphism cassette music player
