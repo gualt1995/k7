@@ -25,7 +25,7 @@ export default class k7{
             duration: 2000,
             autoplay: false,
             easing: 'linear'
-          });
+        });
     }
 
     Setk7(){
@@ -42,40 +42,50 @@ export default class k7{
     }
 
     openk7hatch(){
-        anime({
+        anime.remove('.door, .k7');
+        var timeline = anime.timeline();
+        this.reelRotate.pause();
+        timeline.add({
             targets: ".door",
             rotateX: -25,
-            easing: 'spring(1, 80, 10, 10)',
-        })
-        anime({
-            targets: ".k7",
             duration: 400,
+            easing: 'easeOutBack',
+        },0)
+        timeline.add({
+            targets: ".k7",
             translateY: [
                 { value: this.k7_default_transform - 220, duration: 400, easing: "easeOutInBack"},
             ],
             rotate: [
                 { value: 10, duration: 200, delay: 200, easing: "linear"},
             ]
-        })
+        },200)
     }
 
     closek7hatch(){
-        anime({
-            targets: ".door",
-            rotateX: 0,
-            easing: 'spring(1, 80, 10, 10)',
-        })
-
-        anime({
+        anime.remove('.door, .k7');
+        var timeline = anime.timeline();
+        timeline.add({
             targets: ".k7",
-            duration: 400,
+            duration: 550,
             rotate: 0,
             easing: "easeOutInBack",
             translateY: this.k7_default_transform,
-        })
+            complete: () => {
+                this.reelRotate.play();
+            }
+        },0)
+        timeline.add({
+            targets: ".door",
+            rotateX: 0,
+            duration: 400,
+            easing: 'easeOutBack',
+
+        },450)
     }
 
     switchk7(next){
+        this.closek7hatch()
         if(next){
             var animeStart = "150%"
             var animeEnd = "-150%"
@@ -94,17 +104,21 @@ export default class k7{
                 { value: animeEnd, duration: 0},
                 { value: "0%", duration: 200},
             ],
+            translateY: [
+                { value: this.k7_default_transform , duration: 200, easing: "linear"},
+            ],
+            rotate: [
+                { value: 0 , duration: 200, easing: "linear"},
+            ],
             easing: 'linear',
         })
     }
 
     play(){
-        this.reelRotate.play();
         this.closek7hatch()
     }
 
     pause(){
-        this.reelRotate.pause();
         this.openk7hatch()
     }
 }

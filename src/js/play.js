@@ -136,11 +136,6 @@ export default class play{
             "transition": "0ms",
             "box-shadow": "0px 0px 0px #8B8E98, 0px -6px 12px #6E717C, 0px 6px 10px #54565F, 0px 3px 3px #393B41, inset 0px 6px 8px #5B5E67, inset 0px -6px 8px #787B87"
         });
-        if(event.currentTarget.id=="btn_next"){
-            this.k7.switchk7(false)
-        }else{
-            this.k7.switchk7(true)
-        }
     }
 
     Prev_Next_mouse_up(event){
@@ -154,6 +149,16 @@ export default class play{
                 "transition": "400ms",
                 "box-shadow": "0px -3px 3px #8B8E98, 0px -6px 12px #6E717C, 0px 6px 10px #54565F, 0px 3px 3px #393B41, inset 0px 6px 8px #5B5E67, inset 0px -6px 8px #787B87"
             });
+            if(!$("#screen_playing").hasClass("is_playing")){
+                $("#screen_playing").addClass("is_playing") 
+                $("#btn_ico_play").attr("src", playIcoOn);
+                $("#btn_ico_pause").attr("src", pauseIcoOff);
+            }
+            if(event.currentTarget.id=="btn_next"){
+                this.k7.switchk7(false)
+            }else{
+                this.k7.switchk7(true)
+            }
         }
     }
 }
